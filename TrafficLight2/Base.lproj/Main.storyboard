@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7D-qS-rde">
+                                <rect key="frame" x="150.66666666666666" y="683.33333333333337" width="128.99999999999997" height="65"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.45720511609999998" green="0.32254892800000001" blue="0.92080491779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1G-Tj-DTl"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-ON-Lfn">
+                                <rect key="frame" x="138.33333333333331" y="78.999999999999986" width="153.33333333333331" height="153.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ceT-ON-Lfn" secondAttribute="height" multiplier="1:1" id="TR7-GP-IFr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-Wb-tZM">
+                                <rect key="frame" x="134.33333333333331" y="258" width="161.33333333333331" height="153.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cjy-Wb-tZM" secondAttribute="height" multiplier="21:20" id="Ri3-2G-FuK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlU-aa-7wJ">
+                                <rect key="frame" x="134.33333333333331" y="439.66666666666669" width="161.33333333333331" height="153.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rlU-aa-7wJ" secondAttribute="height" multiplier="21:20" id="geK-RF-BK0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l7D-qS-rde" firstAttribute="top" secondItem="rlU-aa-7wJ" secondAttribute="bottom" constant="90" id="8Jx-4O-OTh"/>
+                            <constraint firstItem="cjy-Wb-tZM" firstAttribute="top" secondItem="ceT-ON-Lfn" secondAttribute="bottom" constant="25.333333333333314" id="FBT-xo-yFs"/>
+                            <constraint firstItem="cjy-Wb-tZM" firstAttribute="width" secondItem="rlU-aa-7wJ" secondAttribute="width" id="NeX-uw-y5M"/>
+                            <constraint firstItem="rlU-aa-7wJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OI6-Ht-mua"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l7D-qS-rde" secondAttribute="bottom" multiplier="1.2" id="Q8I-J0-T8e"/>
+                            <constraint firstItem="ceT-ON-Lfn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tyo-s4-CQD"/>
+                            <constraint firstItem="ceT-ON-Lfn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Xpq-6a-uHp"/>
+                            <constraint firstItem="rlU-aa-7wJ" firstAttribute="top" secondItem="cjy-Wb-tZM" secondAttribute="bottom" constant="28.333333333333428" id="YTx-Kc-Zmc"/>
+                            <constraint firstItem="cjy-Wb-tZM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n94-rO-UGD"/>
+                            <constraint firstItem="ceT-ON-Lfn" firstAttribute="width" secondItem="cjy-Wb-tZM" secondAttribute="width" multiplier="0.952381" id="uAv-WU-g0o"/>
+                            <constraint firstItem="l7D-qS-rde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x8P-BW-S4w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenSignal" destination="rlU-aa-7wJ" id="Esz-Nj-70J"/>
+                        <outlet property="redSignal" destination="ceT-ON-Lfn" id="78I-9G-8UV"/>
+                        <outlet property="yellowSignal" destination="cjy-Wb-tZM" id="tMI-YR-mi8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
