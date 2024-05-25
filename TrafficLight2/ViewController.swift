@@ -13,6 +13,8 @@ final class ViewController: UIViewController {
     @IBOutlet var yellowSignal: UIView!
     @IBOutlet var greenSignal: UIView!
     
+    @IBOutlet var startButton: UIButton!
+    
     var counter = 0
     
     override func viewDidLoad() {
@@ -21,10 +23,12 @@ final class ViewController: UIViewController {
         redSignal.layer.cornerRadius = redSignal.frame.size.width/2
         yellowSignal.layer.cornerRadius = redSignal.frame.size.width/2
         greenSignal.layer.cornerRadius = redSignal.frame.size.width/2
+        
+        startButton.layer.cornerRadius = 12
     }
 
-    @IBAction func changeTrafficLight(_ sender: UIButton) {
-        sender.setTitle("NEXT", for: .normal)
+    @IBAction func changeTrafficLight() {
+        startButton.setTitle("NEXT", for: .normal)
         counter += 1
         
         if counter == 1 {

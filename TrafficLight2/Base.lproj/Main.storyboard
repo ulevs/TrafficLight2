@@ -16,39 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7D-qS-rde">
-                                <rect key="frame" x="150.66666666666666" y="683.33333333333337" width="128.99999999999997" height="65"/>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="START">
-                                    <color key="titleColor" red="0.45720511609999998" green="0.32254892800000001" blue="0.92080491779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1G-Tj-DTl"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-ON-Lfn">
-                                <rect key="frame" x="138.33333333333331" y="78.999999999999986" width="153.33333333333331" height="153.66666666666663"/>
+                                <rect key="frame" x="136" y="79.000000000000014" width="158" height="158.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ceT-ON-Lfn" secondAttribute="height" multiplier="1:1" id="TR7-GP-IFr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-Wb-tZM">
-                                <rect key="frame" x="134.33333333333331" y="258" width="161.33333333333331" height="153.33333333333337"/>
+                                <rect key="frame" x="132" y="262.66666666666669" width="166" height="158"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cjy-Wb-tZM" secondAttribute="height" multiplier="21:20" id="Ri3-2G-FuK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlU-aa-7wJ">
-                                <rect key="frame" x="134.33333333333331" y="439.66666666666669" width="161.33333333333331" height="153.66666666666669"/>
+                                <rect key="frame" x="132" y="448.99999999999994" width="166" height="158.33333333333331"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rlU-aa-7wJ" secondAttribute="height" multiplier="21:20" id="geK-RF-BK0"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7D-qS-rde">
+                                <rect key="frame" x="149.66666666666666" y="697.33333333333337" width="130.99999999999997" height="51"/>
+                                <color key="backgroundColor" red="0.2588235438" green="0.58431375029999999" blue="0.58431375029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="cJZ-5n-VpA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeTrafficLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="k47-MD-l02"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,6 +72,7 @@
                     <connections>
                         <outlet property="greenSignal" destination="rlU-aa-7wJ" id="Esz-Nj-70J"/>
                         <outlet property="redSignal" destination="ceT-ON-Lfn" id="78I-9G-8UV"/>
+                        <outlet property="startButton" destination="l7D-qS-rde" id="Xdj-lc-VgB"/>
                         <outlet property="yellowSignal" destination="cjy-Wb-tZM" id="tMI-YR-mi8"/>
                     </connections>
                 </viewController>
@@ -83,9 +87,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
