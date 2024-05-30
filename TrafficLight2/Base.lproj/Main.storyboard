@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,32 +13,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-ON-Lfn">
-                                <rect key="frame" x="136" y="79.000000000000014" width="158" height="158.33333333333337"/>
+                                <rect key="frame" x="120" y="40" width="80" height="79.5"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ceT-ON-Lfn" secondAttribute="height" multiplier="1:1" id="TR7-GP-IFr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-Wb-tZM">
-                                <rect key="frame" x="132" y="262.66666666666669" width="166" height="158"/>
+                                <rect key="frame" x="118" y="145" width="84" height="79.5"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cjy-Wb-tZM" secondAttribute="height" multiplier="21:20" id="Ri3-2G-FuK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlU-aa-7wJ">
-                                <rect key="frame" x="132" y="448.99999999999994" width="166" height="158.33333333333331"/>
+                                <rect key="frame" x="118" y="253" width="84" height="79.5"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rlU-aa-7wJ" secondAttribute="height" multiplier="21:20" id="geK-RF-BK0"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7D-qS-rde">
-                                <rect key="frame" x="149.66666666666666" y="697.33333333333337" width="130.99999999999997" height="51"/>
+                                <rect key="frame" x="94.5" y="422.5" width="131" height="51"/>
                                 <color key="backgroundColor" red="0.2588235438" green="0.58431375029999999" blue="0.58431375029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="cJZ-5n-VpA"/>

@@ -15,36 +15,46 @@ final class ViewController: UIViewController {
     
     @IBOutlet var startButton: UIButton!
     
-    var counter = 0
+    private var counter = 0
+    
+    private let signalOn = 1.0
+    private let signalOff = 0.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        redSignal.layer.cornerRadius = redSignal.frame.size.width/2
-        yellowSignal.layer.cornerRadius = redSignal.frame.size.width/2
-        greenSignal.layer.cornerRadius = redSignal.frame.size.width/2
-        
         startButton.layer.cornerRadius = 12
+        
+        redSignal.alpha = signalOff
+        yellowSignal.alpha = signalOff
+        greenSignal.alpha = signalOff
+    }
+    override func viewWillLayoutSubviews() {
+        redSignal.layer.cornerRadius = redSignal.frame.size.width / 2
+        yellowSignal.layer.cornerRadius = redSignal.frame.size.width / 2
+        greenSignal.layer.cornerRadius = redSignal.frame.size.width / 2
+        
     }
 
     @IBAction func changeTrafficLight() {
-        startButton.setTitle("NEXT", for: .normal)
+        if startButton.currentTitle == "START" {
+            startButton.setTitle("NEXT", for: .normal)
+        }
         counter += 1
         
         if counter == 1 {
-            redSignal.alpha = 1
-            yellowSignal.alpha = 0.5
-            greenSignal.alpha = 0.5
+            redSignal.alpha = signalOn
+            yellowSignal.alpha = signalOff
+            greenSignal.alpha = signalOff
         }
         if counter == 2 {
-            redSignal.alpha = 0.5
-            yellowSignal.alpha = 1
-            greenSignal.alpha = 0.5
+            redSignal.alpha = signalOff
+            yellowSignal.alpha = signalOn
+            greenSignal.alpha = signalOff
         }
         if counter == 3 {
-            redSignal.alpha = 0.5
-            yellowSignal.alpha = 0.5
-            greenSignal.alpha = 1
+            redSignal.alpha = signalOff
+            yellowSignal.alpha = signalOff
+            greenSignal.alpha = signalOn
             counter = 0
         }
     }
